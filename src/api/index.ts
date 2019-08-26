@@ -1,9 +1,8 @@
 import request from '@/utils/request'
-let test = 'http://192.168.1.50:8089/api'
-// let test = 'http://192.168.1.198:8089/api'
-const baseUrl = process.env.NODE_ENV === 'development' ? test : '/api'
+let test: string = '/api'
+const baseUrl: string = process.env.NODE_ENV === 'development' ? test : '/api'
 
-const api = {
+const api: object = {
   /**
    * 登录-验证码
    * @param params
@@ -52,7 +51,12 @@ const api = {
   },
   // 上传文件
   uploadFile(params: object) {
-    return request(baseUrl + '/customer/uploadCertificate', params, 'post', true)
+    return request(
+      baseUrl + '/customer/uploadCertificate',
+      params,
+      'post',
+      true
+    )
   },
   // 修改学员资料
   editSaveCustomerMsg(params: object) {
@@ -73,7 +77,11 @@ const api = {
    * @param pageSize
    */
   requestTestList(params: object) {
-    return request(baseUrl + '/test/getCustomerPaperByCustomerId', params, 'get')
+    return request(
+      baseUrl + '/test/getCustomerPaperByCustomerId',
+      params,
+      'get'
+    )
   },
   /**
    * 开始考试
