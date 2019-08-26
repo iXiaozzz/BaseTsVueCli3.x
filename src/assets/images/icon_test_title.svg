@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.453" height="18.896" viewBox="0 0 20.453 18.896">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #f76f6f;
+        stroke-width: 2px;
+      }
+
+      .cls-1 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="考试icon" transform="translate(7451 -162.5)">
+    <g id="矩形_141" data-name="矩形 141" class="cls-1" transform="translate(-7451 164.596)">
+      <rect class="cls-3" width="20.453" height="16.8" rx="3"/>
+      <rect class="cls-4" x="1" y="1" width="18.453" height="14.8" rx="2"/>
+    </g>
+    <g id="组_290" data-name="组 290" transform="translate(-7445.156 163.5)">
+      <line id="直线_16" data-name="直线 16" class="cls-2" y2="4.383"/>
+      <line id="直线_20" data-name="直线 20" class="cls-2" y2="4.383" transform="translate(8.765)"/>
+    </g>
+    <g id="组_388" data-name="组 388">
+      <line id="直线_18" data-name="直线 18" class="cls-2" x2="2" y2="2" transform="translate(-7443.5 173.224)"/>
+      <line id="直线_19" data-name="直线 19" class="cls-2" x1="4" y2="4" transform="translate(-7441.5 171.224)"/>
+    </g>
+  </g>
+</svg>

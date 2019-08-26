@@ -1,0 +1,87 @@
+/* 修改UI默认样式 */
+
+// tabbar标签栏选中状态样式
+.van-tab--active {
+  span {
+    font-size: .3rem;
+    font-weight: bold;
+    color: @active-color;
+  }
+}
+// cell 标题不换行,超长显示...
+.van-cell__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 弹出层确认、取消按钮文字样式
+.van-picker__cancel, .van-picker__confirm{
+  font-size: .3rem;
+}
+
+.van-picker__cancel{
+  color: @color-text-secondary;
+}
+
+.van-picker__confirm{
+  color: @active-color;
+}
+
+
+// 多选框选中背景
+.van-checkbox__icon--disabled{
+  &.van-checkbox__icon--checked{
+    .van-icon{
+      color: #fff;
+      border-color: @color-text-disabled;
+      background-color: @color-text-disabled;
+    }
+  }
+}
+.van-checkbox__icon--checked .van-icon{
+  border-color: @active-color;
+  background-color: @active-color;
+}
+.order-confirm .van-checkbox__icon{
+  width: 3rem;
+  text-align: right;
+}
+// navbar样式修改
+.van-nav-bar__title{
+  font-size: 18px;
+  color: #333333;
+  font-weight: 500;
+}
+.van-nav-bar .van-icon{
+  color: #333333;
+  font-size: 20px;
+}
+.van-nav-bar__arrow{
+  font-size: 18px;
+}
+
+// 弹出层确认、取消按钮文字样式
+.van-dialog{
+  width: 70%;
+}
+.van-dialog__message{
+  .font-c(30,#666666);
+}
+.van-dialog__confirm,.van-dialog__confirm:active{
+  .font-c(30,@second-color);
+}
+.van-dialog__cancel{
+  .font-c(30,#999999);
+}
+// .van-picker__cancel, .van-picker__confirm{
+//   font-size: .3rem;
+// }
+
+// .van-picker__cancel{
+//   color: @color-text-secondary;
+// }
+
+// .van-picker__confirm{
+//   color: @second-color;
+// }
