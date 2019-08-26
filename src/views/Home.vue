@@ -9,10 +9,19 @@
 import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
+enum Err {
+  undefined = -1,
+  null = 0,
+  success = 1
+}
 @Component({
   components: {
     HelloWorld
   }
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  private created() {
+    console.log(Err.undefined);
+  }
+}
 </script>

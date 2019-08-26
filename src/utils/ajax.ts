@@ -6,7 +6,8 @@ import utils from './index'
 // import ExceptionHandle from './Exception'
 import qs from 'qs'
 Vue.use(Toast)
-
+// 使用枚举定义状态码
+enum HttpCode { success = 0 }
 /**
   * 封装请求方法
   * @param  {url}  请求url
@@ -40,7 +41,7 @@ export default function getAjax(url: string, data: object = {}, method: string =
       let result: Array<any> = res.data
       let code: number = result['code'] ? Number(result['code']) : -1
       switch (code) {
-        case 0:
+        case HttpCode.success:
           resolve(result);
           break;
         case 2:
