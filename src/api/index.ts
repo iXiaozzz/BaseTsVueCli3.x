@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-let test: string = '/api'
+let test: string = 'api'
 const baseUrl: string = process.env.NODE_ENV === 'development' ? test : '/api'
 
 const api = {
