@@ -23,7 +23,7 @@ export default class componentName extends Vue {
   /** methods*/
   public created() {
     this.test();
-    Api.requestTestList({ customerId: 20340 }).then(res => {});
+    Api.requestTestList({ customerId: "20340" }).then(res => {});
   }
   public test() {
     let a: number = 1;
