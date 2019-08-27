@@ -1,12 +1,16 @@
 <template>
   <div class="testCenter-container">
-    <van-nav-bar title="爱华考试中心" fixed />
+    <van-nav-bar title="红色" fixed />
     <div class="main-container" :style="{ 'min-height': mainContainerH }">
       <div class="info-container">
         <div class="user-head">
           <div class="head-img">
             <img v-if="userInfo.headImg" :src="userInfo.headImg" alt="头像" />
-            <img v-else src="../../assets/images/default_user@3x.png" alt="头像" />
+            <img
+              v-else
+              src="../../assets/images/default_user@3x.png"
+              alt="头像"
+            />
           </div>
         </div>
         <div class="user-info">
@@ -23,7 +27,12 @@
         </div>
 
         <div class="record-list">
-          <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="getData">
+          <van-list
+            v-model="loading"
+            :finished="finished"
+            finished-text="没有更多了"
+            @load="getData"
+          >
             <div
               class="list-item"
               v-for="(data, index) in dataList"
@@ -46,8 +55,12 @@
                 </div>
               </div>
               <!-- <div class="time-info">2019/06/22 09:00 ~ 2019/09/22 09:00</div> -->
-              <div class="time-info">{{ data.testStartTime }}~{{ data.testEndTime }}</div>
-              <div class="test-num">剩余考试次数：{{ data.notDoneTestNum }}</div>
+              <div class="time-info">
+                {{ data.testStartTime }}~{{ data.testEndTime }}
+              </div>
+              <div class="test-num">
+                剩余考试次数：{{ data.notDoneTestNum }}
+              </div>
             </div>
           </van-list>
         </div>
@@ -99,7 +112,7 @@ export default class TestCenter extends Vue {
   private queryForm: queryForm = {
     customerId: "20340",
     pageNum: 1,
-    pageSize: 1000
+    pageSize: 10
   };
   /**computed */
   private get headImgStyleStr(): string {
@@ -109,7 +122,7 @@ export default class TestCenter extends Vue {
     return this.dataList.length;
   }
 
-  /**watch eg */
+  /**watch */
   @Watch("loading")
   private watchLoading(newV: boolean, oldV: boolean): void {
     console.log(newV);
