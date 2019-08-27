@@ -23,7 +23,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { State, Getter, Action } from "vuex-class";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 enum Err {
@@ -39,8 +38,10 @@ enum Err {
 export default class Home extends Vue {
   /**data */
   private count: number = 0;
-  @Getter("message") message: string;
+  // @Getter("message") message: string;
   private created() {
+    this.$store.dispatch("updateMsg", "hello world");
+    console.log(this.$store.getters.message);
     console.log(Err);
   }
   /**methods */
