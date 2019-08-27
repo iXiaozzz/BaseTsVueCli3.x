@@ -8,23 +8,19 @@
       <span class="count">{{ count }}</span>
       <button @click.stop="changeCount(0)">-</button>
     </div>
-    <h2>子组件如下：</h2>
+    <h2>子组件：</h2>
     <HelloWorld
       msg="Welcome to Your Vue.js + TypeScript App"
       :count="count"
       @updateCount="updateCount"
     />
-    <h1>vuex的使用</h1>
-    <div>
-      how to use vuex.
-    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { Getter, Action, namespace } from "vuex-class";
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
 enum Err {
   undefined = -1,
   null = 0,
@@ -39,10 +35,11 @@ export default class Home extends Vue {
   /**data */
   private count: number = 0;
   // @Getter("message") message: string;
+  @Getter("username") getterUsername;
+  @Action("updateUserName") actionUpdateUsername;
   private created() {
-    this.$store.dispatch("updateMsg", "hello world");
-    console.log(this.$store.getters.message);
-    console.log(Err);
+    this.actionUpdateUsername("hello");
+    console.log(this.getterUsername);
   }
   /**methods */
   private updateCount(count: number) {

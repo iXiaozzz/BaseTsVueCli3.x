@@ -1,50 +1,30 @@
 <template>
-  <div class="about">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <h1>vuex的使用如下：</h1>
-    <h2>父组件：</h2>
+  <div class="hello-vuex">
+    <h1></h1>
+    <h2>子组件如下：</h2>
     <div>
       <button @click.stop="changeCount(1)">+</button>
       <span class="count">{{ getterCount }}</span>
       <button @click.stop="changeCount(0)">-</button>
     </div>
-    <hello-vuex></hello-vuex>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from "vue-property-decorator";
 import { Getter, Action } from "vuex-class";
-import HelloVuex from "@/components/HelloVuex.vue";
-import Api from "@/api/index";
-
 @Component({
-  components: { HelloVuex }
+  components: {}
 })
 export default class componentName extends Vue {
-  /** props */
-
-  // @Prop({ required: true }) isShow!: boolean;
-  // @Prop(type) private propName = propValue;
+  // @Prop(type)private propName = propValue;
   // private variableName: typeName = variableValue;
-
-  /** data*/
-  private msg: string = "hello world";
   @Getter("count") getterCount;
   @Action("updateCount") actionUpdateCount;
 
-  private created() {
-    this.test();
-  }
-  /** methods*/
-  private changeCount(type: number) {
+  public changeCount(type: number) {
     let getterCount = this.getterCount;
     getterCount = type ? ++getterCount : --getterCount < 0 ? 0 : getterCount;
     this.actionUpdateCount(getterCount);
-  }
-  private test() {
-    let a: number = 1;
-    let b: number = a / 100;
-    console.log(`this is test`);
   }
 }
 </script>
