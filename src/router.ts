@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 const Home = () => import("@/views/Home.vue");
 const TestCenter = () => import("@/views/testCenter/Index.vue");
+const About = () => import("@/views/About.vue");
 Vue.use(Router);
 
 export default new Router({
@@ -18,8 +19,7 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "@/views/About.vue")
+      component: About
     },
     {
       path: "/testCenter",
