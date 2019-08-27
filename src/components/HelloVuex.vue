@@ -22,7 +22,7 @@ export default class componentName extends Vue {
   @Action("updateCount") actionUpdateCount;
 
   public changeCount(type: number) {
-    let getterCount = this.getterCount;
+    let getterCount: number = this.getterCount;
     getterCount = type ? ++getterCount : --getterCount < 0 ? 0 : getterCount;
     this.actionUpdateCount(getterCount);
   }

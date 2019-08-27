@@ -20,7 +20,7 @@ import Api from "@/api/index";
 @Component({
   components: { HelloVuex }
 })
-export default class componentName extends Vue {
+export default class About extends Vue {
   /** props */
 
   // @Prop({ required: true }) isShow!: boolean;
@@ -37,7 +37,7 @@ export default class componentName extends Vue {
   }
   /** methods*/
   private changeCount(type: number) {
-    let getterCount = this.getterCount;
+    let getterCount: number = this.getterCount;
     getterCount = type ? ++getterCount : --getterCount < 0 ? 0 : getterCount;
     this.actionUpdateCount(getterCount);
   }
