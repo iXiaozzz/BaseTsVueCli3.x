@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="Vue logo" src="@/assets/logo.png" />
     <h1>vuex的使用如下：</h1>
     <h2>父组件：</h2>
     <div>

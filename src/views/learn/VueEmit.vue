@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img alt="Vue logo" src="@/assets/logo.png" />
     <h1>父组件与子组件传值问题：</h1>
     <h2>父组件如下：</h2>
     <div>

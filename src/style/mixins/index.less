@@ -1,23 +1,39 @@
 // 字体颜色 @size为px 结果为rem
-.font-c(@size, @color){
-  font-size: @size/100rem;
+.font-c(@size, @color) {
+  font-size: @size / 100rem;
   color: @color;
 }
 
-.align-items(@dir: center){
+.align-items(@dir: center) {
   align-items: @dir;
 }
 
-.justify-content(@dir: center){
+.justify-content(@dir: center) {
   justify-content: @dir;
 }
 
-.flex(@align: center, @vAlign: center){
+.flex(@align: center, @vAlign: center) {
   display: flex;
   align-items: @vAlign;
   justify-content: @align;
 }
 
-.flex-num(@num){
+.flex-num(@num) {
   flex: @num;
+}
+
+//多行文本溢出
+.ext-more-ellipsis(@lineNum) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: @lineNum;
+  -webkit-box-orient: vertical;
+}
+
+//单行文本溢出
+.text-ellipsis {
+  overflow: hidden;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

@@ -1,25 +1,20 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-const Home = () => import("@/views/Home.vue");
 const TestCenter = () => import("@/views/testCenter/Index.vue");
-const About = () => import("@/views/About.vue");
+const Learn = () => import("@/views/learn/Index.vue");
+const VueEmit = () => import("@/views/learn/VueEmit.vue");
+const Vuex = () => import("@/views/learn/Vuex.vue");
+const VueApi = () => import("@/views/learn/VueApi.vue");
+
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: About
+      name: "learn",
+      component: Learn
     },
     {
       path: "/testCenter",
@@ -28,6 +23,34 @@ export default new Router({
       meta: {
         title: "typescript base项目"
       }
+    },
+    {
+      path: "/learn",
+      name: "Learn",
+      component: Learn,
+      meta: {
+        title: "typescript base项目"
+      },
+      children: [
+        {
+          path: "/learn/vueApi",
+          name: "VueApi",
+          component: VueApi,
+          meta: {
+            title: "vue的api"
+          }
+        },
+        {
+          path: "/learn/vueEmit",
+          name: "VueEmit",
+          component: VueEmit
+        },
+        {
+          path: "/learn/Vuex",
+          name: "Vuex",
+          component: Vuex
+        }
+      ]
     }
   ]
 });

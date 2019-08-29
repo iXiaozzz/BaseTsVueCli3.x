@@ -2,6 +2,7 @@ import Vue from "vue";
 import "vant/lib/index.css";
 import "swiper/dist/css/swiper.css";
 import App from "./App.vue";
+import "vue-tsx-support/enable-check";
 import router from "./router";
 import store from "./store/store";
 import { Dialog } from "vant";
