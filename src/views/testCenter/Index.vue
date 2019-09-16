@@ -6,11 +6,7 @@
         <div class="user-head">
           <div class="head-img">
             <img v-if="userInfo.headImg" :src="userInfo.headImg" alt="头像" />
-            <img
-              v-else
-              src="../../assets/images/default_user@3x.png"
-              alt="头像"
-            />
+            <img v-else src="../../assets/images/default_user@3x.png" alt="头像" />
           </div>
         </div>
         <div class="user-info">
@@ -27,12 +23,7 @@
         </div>
 
         <div class="record-list">
-          <van-list
-            v-model="loading"
-            :finished="finished"
-            finished-text="没有更多了"
-            @load="getData"
-          >
+          <van-list v-model="loading" :finished="finished" finished-text="没有更多了" @load="getData">
             <div
               class="list-item"
               v-for="(data, index) in dataList"
@@ -55,12 +46,8 @@
                 </div>
               </div>
               <!-- <div class="time-info">2019/06/22 09:00 ~ 2019/09/22 09:00</div> -->
-              <div class="time-info">
-                {{ data.testStartTime }}~{{ data.testEndTime }}
-              </div>
-              <div class="test-num">
-                剩余考试次数：{{ data.notDoneTestNum }}
-              </div>
+              <div class="time-info">{{ data.testStartTime }}~{{ data.testEndTime }}</div>
+              <div class="test-num">剩余考试次数：{{ data.notDoneTestNum }}</div>
             </div>
           </van-list>
         </div>
