@@ -6,7 +6,8 @@ const Learn = () => import("@/views/learn/Index.vue");
 const VueEmit = () => import("@/views/learn/VueEmit.vue");
 const Vuex = () => import("@/views/learn/Vuex.vue");
 const VueApi = () => import("@/views/learn/VueApi.vue");
-
+const Demo = () => import("@/views/demo/Index.vue");
+const TestStart = () => import("@/views/testStart/Index.vue");
 Vue.use(Router);
 
 export default new Router({
@@ -24,6 +25,23 @@ export default new Router({
         title: "typescript base项目"
       }
     },
+    {
+      path: "/testStart",
+      name: "TestStart",
+      component: TestStart,
+      meta: {
+        title: "开始"
+      }
+    },
+    {
+      path: "/demo",
+      name: "Demo",
+      component: Demo,
+      meta: {
+        title: "测试"
+      }
+    },
+
     {
       path: "/learn",
       name: "Learn",
