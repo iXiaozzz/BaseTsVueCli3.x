@@ -40,6 +40,5 @@
 
   if (!doc.addEventListener) return;
   window.addEventListener(resizeEvt, recalc, false);
-  console.log(11);
   doc.addEventListener("DOMContentLoaded", recalc, false);
 })(window);

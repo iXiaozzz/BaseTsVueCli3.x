@@ -1,6 +1,6 @@
 <template>
   <div class="testCenter-container">
-    <van-nav-bar title="爱华考试中心" fixed />
+    <van-nav-bar title="红色" fixed />
     <div class="main-container" :style="{ 'min-height': mainContainerH }">
       <div class="info-container">
         <div class="user-head">
@@ -99,7 +99,7 @@ export default class TestCenter extends Vue {
   private queryForm: queryForm = {
     customerId: "20340",
     pageNum: 1,
-    pageSize: 1000
+    pageSize: 10
   };
   /**computed */
   private get headImgStyleStr(): string {
@@ -109,7 +109,7 @@ export default class TestCenter extends Vue {
     return this.dataList.length;
   }
 
-  /**watch eg */
+  /**watch */
   @Watch("loading")
   private watchLoading(newV: boolean, oldV: boolean): void {
     console.log(newV);
