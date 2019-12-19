@@ -22,6 +22,7 @@ enum Err {
 export default class Home extends Vue {
   private created() {
     console.log(Err.undefined);
+    console.log(`hello world.`)
   }
 }
 </script>
